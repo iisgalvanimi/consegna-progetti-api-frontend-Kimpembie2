@@ -1,0 +1,15 @@
+<div>
+    <div *ngIf="loading" class="">
+        loading...
+    </div>
+
+    <div *ngIf="!loading && cardData" class="">
+        <h1>{{cardData.name}}</h1>
+        <img [src]="cardData.image_uris.normal" alt="{{cardData.name}}">
+        <p>Tipo: {{cardData.type_line}}</p>
+        <p>Descrizione: {{cardData.oracle_text}}</p>
+        <p>Espansione: {{cardData.set_name}}</p>
+        <p>Tipo: {{cardData.prices.usd}} $</p>
+        
+    </div>
+</div>

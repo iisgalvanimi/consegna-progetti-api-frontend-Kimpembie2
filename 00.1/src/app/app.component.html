@@ -1,0 +1,12 @@
+<div>
+  <input [(ngModel)]="searchTerm" placeholder="cerca una carta"/>
+  <button (click)="search()">cerca</button>
+</div>
+
+<button routerLink="/card/captain-lannery-storm">Captain Lannety Storm</button>
+<button routerLink="/card/wildfire">Wildfire</button>
+<button routerLink="/card/arcane-heist">Arcane Heist</button>
+<button routerLink="/card/plagued-rusalka">Plagued Rusalka</button>
+<button routerLink="/card/subtlety">Subtlety</button>
+
+<router-outlet></router-outlet>

@@ -5,7 +5,7 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   { path: 'card/:name', component: MainComponent},
-  { path: '', redirectTo: 'card/black-lotus', pathMatch: 'full'},
+  { path: '', redirectTo: 'card/captain-lannety-storm', pathMatch: 'full'},
 ];
 
 @NgModule({

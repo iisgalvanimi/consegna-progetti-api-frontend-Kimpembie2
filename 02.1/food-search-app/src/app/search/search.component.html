@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h1>Cerca un prodotto alimentare</h1>
+    <div class="form-group">
+      <input [(ngModel)]="searchTerm" class="form-control" placeholder="Cerca un prodotto..." (input)="onSearch()">
+    </div>
+  
+    <div *ngIf="products.length > 0">
+      <h3>Risultati della ricerca</h3>
+      <div class="row">
+        <div class="col-12 col-md-4" *ngFor="let product of products">
+          <div class="card">
+            <img *ngIf="product.image_url" [src]="product.image_url" class="card-img-top" alt="{{product.product_name}}">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.product_name }}</h5>
+              <a [routerLink]="['/item', product.code]" class="btn btn-primary">Vedi dettagli</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

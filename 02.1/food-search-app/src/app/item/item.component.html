@@ -1,4 +1,22 @@
-<div class="container mt-4">
+<!--<div class="container mt-4">
+    <h1>Dettagli del prodotto</h1>
+  
+    <div *ngIf="product">
+      <div class="card">
+        <img *ngIf="product.product.image_url" [src]="product.product.image_url" class="card-img-top" alt="{{product.product.product_name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.product.product_name }}</h5>
+          <p><strong>Marca:</strong> {{ product.product.brands || 'Non disponibile' }}</p>
+          <p><strong>Categoria:</strong> {{ product.product.categories || 'Non disponibile' }}</p>
+          <p><strong>Descrizione:</strong> {{ product.product.ingredients_text || 'Non disponibile' }}</p>
+          <p><strong>Prezzo:</strong> {{ product.product.price | currency:'EUR' || 'Non disponibile' }}</p>
+          <a routerLink="/" class="btn btn-secondary">Indietro</a>
+        </div>
+      </div>
+    </div>
+  </div>!-->
+
+  <div class="container mt-4">
     <h1>Dettagli del prodotto</h1>
   
     <div *ngIf="product">
@@ -9,9 +27,11 @@
           <p><strong>Marca:</strong> {{ product.product.brands }}</p>
           <p><strong>Categoria:</strong> {{ product.product.categories }}</p>
           <p><strong>Descrizione:</strong> {{ product.product.ingredients_text || 'N/A' }}</p>
-          <pre>{{ product | json }}</pre>
+          <p><strong>Prezzo:</strong> {{ product.product.price || 'N/A'}}</p>
           <a routerLink="/" class="btn btn-secondary">Indietro</a>
         </div>
       </div>
     </div>
   </div>
+  
+  

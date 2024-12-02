@@ -19,4 +19,4 @@ export class FoodService {
     const url = `https://world.openfoodfacts.org/api/v0/product/${id}.json`;
     return this.http.get<any>(url);
   }
-}
+}  
